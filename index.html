@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style src="src/styles.css"></style>
     <title>Time Zone Clock</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <label for="city">Select the city</label>
@@ -14,7 +16,7 @@
       <option value="Lisbon">Lisbon 🇵🇹</option>
       <option value="Tokyo">Tokyo 🇯🇵</option>
       <option value="Bogota">Bogota 🇨🇴</option>
-      <p id="current-time"></p>
+      <p id="text"></p>
     </select>
     <script src="src/app.js"></script>
   </body>
