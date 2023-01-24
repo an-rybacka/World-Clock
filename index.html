@@ -5,19 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style src="src/styles.css"></style>
-    <title>Time Zone Clock</title>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <title>World Clock</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
-    <label for="city">Select the city</label>
-    <select id="city" name="city">
-      <option value="">Select</option>
-      <option value="Europe/Lisbon">Lisbon 🇵🇹</option>
-      <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
-      <option value="America/Bogota">Bogota 🇨🇴</option>
-      <p id="text"></p>
-    </select>
+    <div class="clock-container">
+      <label for="city">Select the city</label>
+      <select id="city" name="city">
+        <option value="">Select</option>
+        <option value="Europe/Lisbon">Lisbon 🇵🇹</option>
+        <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
+        <option value="America/Bogota">Bogota 🇨🇴</option>
+        <p id="text"></p>
+      </select>
+    </div>
+    <footer>
+      This project was coded by Aneta Rybacka and is
+      <a href="https://github.com/an-rybacka/World-Clock" target="_blank"
+        >open sourced on Github</a
+      >
+    </footer>
     <script src="src/app.js"></script>
   </body>
 </html>
