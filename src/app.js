@@ -56,7 +56,8 @@ if (cityTimeZone === "current") {
        <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
     "A"
   )}</small></div>
-        </div>`;
+        </div>
+        <a href="/">Go Back</a>`;
 }
 
 updateTime();
