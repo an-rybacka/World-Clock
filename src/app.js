@@ -58,6 +58,21 @@ if (cityTimeZone === "current") {
   )}</small></div>
         </div>
         <a href="/">Go Back</a>`;
+
+        // Updating the time of the selected city every second
+setInterval(() => {
+  cityTime = moment().tz(cityTimeZone);
+  citiesElement.innerHTML = `<div class="city">
+        <div>
+        <h2>${cityName}</h2>
+        <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+        </div>
+       <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
+    "A"
+  )}</small></div>
+        </div>
+        <a href="/">Go Back</a>`;
+}, 1000);
 }
 
 updateTime();
