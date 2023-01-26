@@ -1,3 +1,5 @@
+document.querySelector("#myVideo").playbackRate = 0.6;
+
 function updateTime() {
   //Lisbon
   let lisbonElement = document.querySelector("#lisbon");
@@ -41,9 +43,9 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
-if (cityTimeZone === "current") {
-  cityTimeZone = moment.tz.guess();
-}
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
 
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
@@ -59,20 +61,20 @@ if (cityTimeZone === "current") {
         </div>
         <a href="/">Go Back</a>`;
 
-        // Updating the time of the selected city every second
-setInterval(() => {
-  cityTime = moment().tz(cityTimeZone);
-  citiesElement.innerHTML = `<div class="city">
+  // Updating the time of the selected city every second
+  setInterval(() => {
+    cityTime = moment().tz(cityTimeZone);
+    citiesElement.innerHTML = `<div class="city">
         <div>
         <h2>${cityName}</h2>
         <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
         </div>
        <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
-    "A"
-  )}</small></div>
+      "A"
+    )}</small></div>
         </div>
         <a href="/">Go Back</a>`;
-}, 1000);
+  }, 1000);
 }
 
 updateTime();
